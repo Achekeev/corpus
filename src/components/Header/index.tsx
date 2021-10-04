@@ -1,21 +1,23 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import logoo from "assets/img/logoo.svg";
 import busket from "assets/img/busket.png";
+import RouteNames from "router/routeNames";
 
 const Header = () => {
     return (
         <div className="header">
             <div className="logo">
-                <a href="/">
+                <Link to={RouteNames.ROOT} >
                     <img src={logoo} alt=""/>
-                </a>
+                </Link>
             </div>
             <nav>
                 <ul className="nav">
-                    <li><a href="/">Категории</a></li>
-                    <li><a href="/">Каталог товаров</a></li>
-                    <li><a href="/#contacts">Контакты</a></li>
-                    <li><a href="/">О нас</a></li>
+                    <li><Link to={RouteNames.CATEGORIES}>Категории</Link></li>
+                    {/*<li><Link to={RouteNames.ROOT}>Каталог товаров</Link></li>*/}
+                    <li><Link to="/#contacts">Контакты</Link></li>
+                    <li><Link to={RouteNames.ABOUT}>О нас</Link></li>
                 </ul>
             </nav>
             <div className="cart">
