@@ -1,0 +1,7 @@
+// ----------MOBILE
+@media screen and (max-width: 425px) {
+    .company{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

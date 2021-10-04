@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Ridgeline 201';
+    src: local('Ridgeline 201 Regular'), local('Ridgeline-201-Regular'),
+        url('Ridgeline201-Regular.woff2') format('woff2'),
+        url('Ridgeline201-Regular.woff') format('woff'),
+        url('Ridgeline201-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

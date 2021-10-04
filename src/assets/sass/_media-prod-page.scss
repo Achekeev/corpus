@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+    .container{
+        width: 426px;
+    }
+    .prod-card{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

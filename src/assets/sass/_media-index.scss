@@ -1,0 +1,121 @@
+@media screen and (max-width: 2560px) {
+    .container{
+        width: 1025px;
+    }
+    .features{
+        .burger img{
+            width: 40px;
+            height: 24px;
+        }        
+    }
+    .cards{
+        display: none;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 1441px) {
+    .container{
+        width: 1025px;
+    }
+    .features{
+        .burger img{
+            width: 40px;
+            height: 24px;
+        }        
+    }
+    .cards{
+        display: none;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .container{
+        width: 1025px;
+    }
+    .features{
+        .burger img{
+            width: 40px;
+            height: 24px;
+        }        
+    }
+    .cards{
+        display: none;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        width: 769px;
+    }
+    .features{
+        .burger img{
+            width: 40px;
+            height: 24px;
+        }        
+    }
+}
+
+// TABLET
+@media screen and (max-width: 768px) {
+    .container{
+        width: 426px;
+    }
+    .header{
+        .nav{
+            display: none;
+        }
+    }
+    .slider{
+        .s-item{
+            width: 120px;
+            height: 100px;
+        }
+        .last{
+            display: none;
+        }
+    }
+    .hit{
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+// ----------MOBILE
+@media screen and (max-width: 425px) {
+    .container{
+        width: 375px;
+    }
+    .cards{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .slider{
+        display: none;
+    }
+    .slide-item{
+        padding-left: 150px;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .hit{
+        img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
