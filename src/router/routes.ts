@@ -3,6 +3,7 @@ import RouteNames from "router/routeNames";
 import Home from "pages/Home";
 import About from "pages/About";
 import Categories from "pages/Categories";
+import Product from "pages/Product";
 
 interface IRoute {
     path: RouteNames,
@@ -19,6 +20,11 @@ export default [
     {
         path: RouteNames.CATEGORIES,
         component: Categories,
+        exact: true
+    },
+    {
+        path: RouteNames.PRODUCT,
+        component: Product,
         exact: true
     },
     {

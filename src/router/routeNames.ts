@@ -1,7 +1,8 @@
 enum RouteNames {
     ROOT = "/",
     ABOUT = "/about",
-    CATEGORIES = "/categories"
+    CATEGORIES = "/categories",
+    PRODUCT = "/product/:id"
 }
 
 export default RouteNames
