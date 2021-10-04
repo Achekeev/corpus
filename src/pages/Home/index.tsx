@@ -7,7 +7,7 @@ import Products from "pages/Home/Products";
 import Cards from "pages/Home/Cards";
 import Filter from "pages/Home/Filter";
 import Pages from "pages/Home/Pages"
-import Footer from "pages/Home/Footer";
+import Footer from "components/Footer";
 
 const Home = () => {
     return (
