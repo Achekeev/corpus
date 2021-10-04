@@ -1,14 +1,18 @@
 import React from 'react';
-import Home from "./pages/Home";
 
 import "assets/css/style.css"
 import "assets/css/normalize.css"
 import "assets/fonts/Roboto/roboto.css"
 
+import {BrowserRouter as Router,} from "react-router-dom";
+import Routes from "router";
+
 function App() {
     return (
         <>
-            <Home />
+            <Router>
+                <Routes/>
+            </Router>
         </>
     );
 }
