@@ -7,7 +7,8 @@ interface ProductProps {
     sale: boolean,
     color: string,
     price: number,
-    hit: boolean
+    hit: boolean,
+    description: string
 }
 
 const Sale = () => (
@@ -24,17 +25,17 @@ const SellHit = () => (
 )
 
 
-const Product = ({image, sale, color, price, hit}: ProductProps) => {
+const Product = (props: ProductProps) => {
     return (
         <div className="products-item">
-            <img src={image} alt=""/>
-            {sale && <Sale/>}
-            {hit && <SellHit />}
-            {color}
+            <img src={props.image} alt=""/>
+            {props.sale && <Sale/>}
+            {props.hit && <SellHit />}
+            {props.description}: {props.color}
             <div className="description">
                 <div className="desc-block">
                     <div className="price">
-                        {price} сом
+                        {props.price} сом
                     </div>
                     <div className="group-busket">
                         <a href="/"><img src={buy} alt=""/></a>

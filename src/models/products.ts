@@ -19,6 +19,7 @@ export interface Product {
     "image3"?: string,
     "image4"?: string,
     "image5"?: string,
-    "image6"?: string
+    "image6"?: string,
+    description: string
 }
 
