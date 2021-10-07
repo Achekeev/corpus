@@ -7,7 +7,7 @@ const Routes = () => {
         <Switch>
             {routes.map(
                 ({component, ...rest}) =>
-                    <Route {...rest} children={component}/>
+                    <Route {...rest} children={component} key={rest.path}/>
             )}
         </Switch>
     );
