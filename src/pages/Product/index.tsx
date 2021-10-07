@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from "components/Header";
-import Features from "pages/Home/Features";
+import Features from "components/Features";
 import cat from "assets/img/cat-img.jpg"
 import Footer from "components/Footer";
 

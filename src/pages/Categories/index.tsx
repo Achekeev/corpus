@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from "components/Header";
-import Features from "pages/Home/Features";
+import Features from "components/Features";
 import Contacts from "pages/Home/Contacts";
 import Filter from "pages/Home/Filter";
 import Category from "pages/Categories/Category";

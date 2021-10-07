@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from "components/Header";
-import Features from "pages/Home/Features";
+import Features from "components/Features";
 import Contacts from "pages/Home/Contacts";
 import AppSlider from "pages/Home/AppSlider";
 import Products from "pages/Home/Products";

@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import burger from "assets/img/burger.svg"
-import chair from "assets/img/1armch.png"
 import ArrowLeftDropCircleOutlineIcon from "mdi-react/ArrowLeftDropCircleOutlineIcon";
 import ArrowRightDropCircleOutlineIcon from "mdi-react/ArrowRightDropCircleOutlineIcon";
+import {useAppDispatch, useAppSelector} from "hooks";
+import {fetchProducts} from "store/products";
+import Feature from "components/Features/Feature";
+
 const Features = () => {
+    const {products} = useAppSelector(state => state.products);
+    const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        dispatch(fetchProducts())
+    }, [dispatch])
     return (
         <div className="features">
             <div className="burger">
@@ -27,48 +36,7 @@ const Features = () => {
                     <ArrowLeftDropCircleOutlineIcon/>
                 </button>
 
-                <li className="slide-item">
-                    <a href="/">
-                        <img src={chair} alt=""/>
-                        <span className="caption">Офисные стулья</span>
-                    </a>
-                </li>
-                <li className="slide-item">
-                    <a href="/">
-                        <img src={chair} alt=""/>
-                        <span className="caption">Офисные стулья</span>
-                    </a>
-                </li>
-                <li className="slide-item">
-                    <a href="/">
-                        <img src={chair} alt=""/>
-                        <span className="caption">Офисные стулья</span>
-                    </a>
-                </li>
-                <li className="slide-item">
-                    <a href="/">
-                        <img src={chair} alt=""/>
-                        <span className="caption">Офисные стулья</span>
-                    </a>
-                </li>
-                <li className="slide-item">
-                    <a href="/">
-                        <img src={chair} alt=""/>
-                        <span className="caption">Офисные стулья</span>
-                    </a>
-                </li>
-                <li className="slide-item">
-                    <a href="/">
-                        <img src={chair} alt=""/>
-                        <span className="caption">Офисные стулья</span>
-                    </a>
-                </li>
-                <li className="slide-item">
-                    <a href="/">
-                        <img src={chair} alt=""/>
-                        <span className="caption">Офисные стулья</span>
-                    </a>
-                </li>
+                {products.map((product) => <Feature image={product.image} description={product.description} key={product.id}/>)}
 
                 <button className="btn" style={{color: "black"}}>
                     <ArrowRightDropCircleOutlineIcon/>
