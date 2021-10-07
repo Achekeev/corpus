@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import logoo from "assets/img/logoo.svg";
-import busket from "assets/img/busket.png";
 import RouteNames from "router/routeNames";
+import Cart from "components/Header/Cart";
 
 const Header = () => {
     return (
@@ -20,12 +20,7 @@ const Header = () => {
                     <li><Link to={RouteNames.ABOUT}>О нас</Link></li>
                 </ul>
             </nav>
-            <div className="cart">
-                <a href="/">
-                    <img src={busket} alt=""/>
-                    <div className="counter">0</div>
-                </a>
-            </div>
+            <Cart />
         </div>
     );
 };
