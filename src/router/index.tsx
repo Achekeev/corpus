@@ -6,8 +6,8 @@ const Routes = () => {
     return (
         <Switch>
             {routes.map(
-                (props) => <Route {...props} key={props.path}/>
-            )}
+                (props) => <Route {...props} key={props.path}/>)
+            }
         </Switch>
     );
 };
