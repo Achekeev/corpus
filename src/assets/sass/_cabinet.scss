@@ -1,0 +1,65 @@
+.cabinet{
+    margin-top: 100px;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+h1{
+    font-family: "Roboto";
+    text-align: center;
+}
+.pro-name{
+    font-size: 24px;
+}
+.cab-line{
+    width: 180px;
+}
+
+.cab-item{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: space-between;
+    font-family: 'Comfortaa', cursive;
+    margin-top: 50px;
+}
+.cab-info{
+    padding-left: 15px;
+    padding-bottom: 20px;
+    .info{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.counter-btn{
+    margin-top: 50px;
+    font-family: 20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.value{
+    font-family: "Roboto";
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
+    font-size: 22px;
+}
+
+.delete-btn{
+    background-color: $delete;
+    color: white;
+    border: none;
+    grid-template: 36px;
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 50px;
+}
+.order{
+    margin-top: 20px;
+    margin-left: 40%;
+    width: 300px;
+    height: 50px;
+    font-size: 28px;
+    border-radius: 8px;
+    background-color: rgb(58, 207, 38);
+    color: black;
+    font-family: "Roboto";
+}

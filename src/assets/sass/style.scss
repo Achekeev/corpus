@@ -7,6 +7,8 @@
 @import "media-prod-page";
 @import "about";
 @import "media-about";
+@import "cabinet";
+@import "media-cabinet";
 
 *{
     box-sizing: border-box;
@@ -18,8 +20,13 @@
         list-style: none;
     }
 }
-
+body{
+    min-width: fit-content;
+}
 .container{
     margin: 0 auto;
     font-family: "Roboto";
+}
+button{
+    outline: none;
 }

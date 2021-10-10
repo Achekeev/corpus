@@ -63,6 +63,15 @@
             height: 24px;
         }        
     }
+    .slider{
+        .s-item{
+            width: 100px;
+            height: 80px;
+        }
+    .slide{
+        padding-left: 132px;
+        }
+    }
 }
 
 // TABLET
@@ -77,12 +86,15 @@
     }
     .slider{
         .s-item{
-            width: 120px;
-            height: 100px;
+            width: 100px;
+            height: 80px;
         }
         .last{
             display: none;
         }
+    }
+    .slide{
+        padding-left: 120px;
     }
     .hit{
         img{
@@ -105,9 +117,6 @@
     .slider{
         display: none;
     }
-    .slide-item{
-        padding-left: 150px;
-    }
     .products{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -117,5 +126,14 @@
             width: 30px;
             height: 30px;
         }
+    }
+    .footer{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 424px) {
+    .footer{
+        display: block;
+        width: 100%;
     }
 }
