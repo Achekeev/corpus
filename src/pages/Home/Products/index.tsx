@@ -14,7 +14,7 @@ const Products = () => {
     return (
         <section className="products">
             {products.map((product, i) =>
-                <Product key={i} image={product.image} color={product.color} sale={product.sale} price={product.price}
+                <Product key={i} id={product.id} image={product.image} color={product.color} sale={product.sale} price={product.price}
                          hit={product.hit} description={product.description}/>
             )}
         </section>
