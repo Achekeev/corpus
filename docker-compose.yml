@@ -5,7 +5,7 @@ services:
     build:
       context: .
       args:
-        - apihost=${REACT_APP_APIHOST}
+        - apihost=${REACT_APP_API_HOST}
     container_name: ${PROJECT_NAME}Nginx
     ports:
       - "80:80"
