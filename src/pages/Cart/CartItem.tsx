@@ -1,5 +1,5 @@
 import React from 'react';
-import cartImage2 from "assets/img/cab-img-2.svg";
+// import cartImage2 from "assets/img/cab-img-2.svg";
 import {useAppActions, useAppDispatch, useAppSelector} from "hooks";
 
 interface CartItemProps {
