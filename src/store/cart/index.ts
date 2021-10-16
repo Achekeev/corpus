@@ -10,12 +10,7 @@ interface IState {
 }
 
 const initialState: IState = {
-    orders: [
-        {
-            productID: 1,
-            amount: 1,
-        }
-    ],
+    orders: [],
 }
 
 export const cartSlice = createSlice({
