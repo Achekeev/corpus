@@ -10,8 +10,9 @@ const Contacts = () => {
     return (
         <section className="contacts" id="contacts">
             <a href={`mailto:${email}`}>{email}</a>
-            <a href="/">
-                Режим работы: 09:00-18:00, СБ/ВС-выходные
+            <a href="/" style={{textAlign: "center"}}>
+                Режим работы: 09:00-18:00<br/>
+                СБ/ВС-выходные
             </a>
             <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
             <a href={`https://wa.me/${whatsAppNumber}`}>
