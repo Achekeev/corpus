@@ -2,7 +2,10 @@ version: "3.3"
 
 services:
   nginx:
-    build: .
+    build:
+      context: .
+      args:
+        - apihost=${REACT_APP_APIHOST}
     container_name: ${PROJECT_NAME}Nginx
     ports:
       - "80:80"

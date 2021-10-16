@@ -2,6 +2,9 @@ FROM node:14.17.2 as build
 
 WORKDIR /app
 
+ARG apihost
+ENV REACT_APP_APIHOST=$apihost
+
 COPY package.json yarn.lock ./
 RUN yarn install
 
