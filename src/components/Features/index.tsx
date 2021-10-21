@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import burger from "assets/img/burger.svg"
 import ArrowLeftDropCircleOutlineIcon from "mdi-react/ArrowLeftDropCircleOutlineIcon";
 import ArrowRightDropCircleOutlineIcon from "mdi-react/ArrowRightDropCircleOutlineIcon";
@@ -10,15 +10,17 @@ const Features = () => {
     const {products} = useAppSelector(state => state.products);
     const dispatch = useAppDispatch();
 
+    const [showMenu, setShowMenu] = useState(false);
+
     useEffect(() => {
         dispatch(fetchProducts())
     }, [dispatch])
     return (
         <div className="features">
-            <div className="burger">
+            <div className="burger" onClick={() => setShowMenu(!showMenu)}>
                 <img src={burger} alt=""/>
             </div>
-            <div id="menu" className="menu">
+            <div id="menu" className="menu" style={{display: showMenu ? "block" : "none"}}>
                 <ul>
                     <li><a href="/">Категории</a></li>
                     <hr/>
@@ -31,12 +33,14 @@ const Features = () => {
                 </ul>
             </div>
 
+
             <ul className="slide">
                 <button className="btn" style={{color: "black"}}>
                     <ArrowLeftDropCircleOutlineIcon/>
                 </button>
 
-                {products.map((product) => <Feature image={product.image} description={product.description} key={product.id}/>)}
+                {products.map((product) => <Feature image={product.image} description={product.description}
+                                                    key={product.id}/>)}
 
                 <button className="btn" style={{color: "black"}}>
                     <ArrowRightDropCircleOutlineIcon/>
