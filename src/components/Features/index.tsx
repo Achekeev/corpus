@@ -3,7 +3,6 @@ import burger from "assets/img/burger.svg"
 import ArrowLeftDropCircleOutlineIcon from "mdi-react/ArrowLeftDropCircleOutlineIcon";
 import ArrowRightDropCircleOutlineIcon from "mdi-react/ArrowRightDropCircleOutlineIcon";
 import {useAppDispatch, useAppSelector} from "hooks";
-import {fetchProducts} from "store/products";
 import Feature from "components/Features/Feature";
 import {fetchCategories} from "store/categories";
 
@@ -16,7 +15,7 @@ const Features = () => {
     useEffect(() => {
         dispatch(fetchCategories())
     }, [dispatch])
-    
+
     return (
         <div className="features">
             <div className="burger" onClick={() => setShowMenu(!showMenu)}>
