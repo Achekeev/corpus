@@ -9,18 +9,22 @@ const Contacts = () => {
     const whatsAppNumber = "996556052952"
     return (
         <section className="contacts" id="contacts">
-            <a href={`mailto:${email}`}>{email}</a>
-            <a href="/" style={{textAlign: "center"}}>
-                Режим работы: 09:00-18:00<br/>
-                СБ/ВС-выходные
-            </a>
-            <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
-            <a href={`https://wa.me/${whatsAppNumber}`}>
-                <img src={whatsAppImage} alt="" className="wa"/>
-            </a>
-            <a href="/">
-                <img src={telegramImage} alt=""/>
-            </a>
+            <div className="left">
+                <a href={`mailto:${email}`}>{email}</a>
+                <a href="/" style={{textAlign: "center"}}>
+                    Режим работы: 09:00-18:00<br/>
+                    СБ/ВС-выходные
+                </a>
+            </div>
+            <div className="right">
+                <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
+                <a href={`https://wa.me/${whatsAppNumber}`}>
+                    <img src={whatsAppImage} alt="" className="wa"/>
+                </a>
+                <a href="/">
+                    <img src={telegramImage} alt=""/>
+                </a>
+            </div>
         </section>
     );
 };
