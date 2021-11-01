@@ -1,10 +1,10 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
 import {categoriesAPI} from "api";
 import {AxiosResponse} from "axios";
-import {Product} from "models/products";
+import Category from "models/category";
 
 interface CounterState {
-    categories: Product[]
+    categories: Category[]
 }
 
 const initialState: CounterState = {
@@ -14,7 +14,7 @@ const initialState: CounterState = {
 export const fetchCategories = createAsyncThunk(
     'categories/all',
     async () => {
-        const response: AxiosResponse<Product[]> = await categoriesAPI.get("")
+        const response: AxiosResponse<Category[]> = await categoriesAPI.get("")
         console.log(response.data)
         return response.data
     }

@@ -5,16 +5,18 @@ import ArrowRightDropCircleOutlineIcon from "mdi-react/ArrowRightDropCircleOutli
 import {useAppDispatch, useAppSelector} from "hooks";
 import {fetchProducts} from "store/products";
 import Feature from "components/Features/Feature";
+import {fetchCategories} from "store/categories";
 
 const Features = () => {
-    const {products} = useAppSelector(state => state.products);
+    const {categories} = useAppSelector(state => state.categories);
     const dispatch = useAppDispatch();
 
     const [showMenu, setShowMenu] = useState(false);
 
     useEffect(() => {
-        dispatch(fetchProducts())
+        dispatch(fetchCategories())
     }, [dispatch])
+    
     return (
         <div className="features">
             <div className="burger" onClick={() => setShowMenu(!showMenu)}>
@@ -39,8 +41,8 @@ const Features = () => {
                     <ArrowLeftDropCircleOutlineIcon/>
                 </button>
 
-                {products.map((product) => <Feature image={product.image} description={product.description}
-                                                    key={product.id}/>)}
+                {categories.map((category, index) => <Feature image={category.image} description={category.name}
+                                                    key={index}/>)}
 
                 <button className="btn" style={{color: "black"}}>
                     <ArrowRightDropCircleOutlineIcon/>
