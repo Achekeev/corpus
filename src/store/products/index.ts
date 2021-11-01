@@ -15,6 +15,7 @@ export const fetchProducts = createAsyncThunk(
     'users/fetchByIdStatus',
     async () => {
         const response: AxiosResponse<Product[]> = await productsAPI.get("")
+        console.log(response.data)
         return response.data
     }
 )

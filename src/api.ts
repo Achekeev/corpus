@@ -3,5 +3,9 @@ import axios from "axios"
 const baseURL = process.env.REACT_APP_API_HOST
 
 export const productsAPI = axios.create({
-    baseURL: `${baseURL}/products/`
+    baseURL: `${baseURL}/products`
+})
+
+export const categoriesAPI = axios.create({
+    baseURL: `${baseURL}/categories`
 })
