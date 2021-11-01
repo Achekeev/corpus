@@ -17,6 +17,9 @@ const Features = () => {
         dispatch(fetchCategories())
     }, [dispatch])
 
+    const leftArrow = "<"
+    const rightArrow = ">"
+
     return (
         <div className="features">
             <div className="burger" onClick={() => setShowMenu(!showMenu)}>
@@ -37,15 +40,15 @@ const Features = () => {
 
 
             <ul className="slide">
-                <button className="btn" style={{color: "black"}}>
-                    <ArrowLeftDropCircleOutlineIcon/>
+                <button className="btn">
+                    {leftArrow}
                 </button>
 
                 {categories.map((category, index) => <Feature image={category.image} description={category.name}
                                                     key={index}/>)}
 
-                <button className="btn" style={{color: "black"}}>
-                    <ArrowRightDropCircleOutlineIcon/>
+                <button className="btn">
+                    {rightArrow}
                 </button>
             </ul>
         </div>
