@@ -9,3 +9,7 @@ export const productsAPI = axios.create({
 export const categoriesAPI = axios.create({
     baseURL: `${baseURL}/categories`
 })
+
+export const discountsAPI = axios.create({
+    baseURL: `${baseURL}/discounts`
+})

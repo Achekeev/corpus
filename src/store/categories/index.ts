@@ -3,12 +3,24 @@ import {categoriesAPI} from "api";
 import {AxiosResponse} from "axios";
 import Category from "models/category";
 
+import chair from '../../assets/img/1armch.png'
+
 interface CounterState {
     categories: Category[]
 }
 
 const initialState: CounterState = {
-    categories: [],
+    categories: [
+      {image: chair, name: 'Офисные стулья'},
+      {image: chair, name: 'Шкафы'},
+      {image: chair, name: 'Диваны'},
+      {image: chair, name: 'Кровати'},
+      {image: chair, name: 'Стулья'},
+      {image: chair, name: 'Стол'},
+      {image: chair, name: 'Кровати'},
+      {image: chair, name: 'Стенки'},
+      {image: chair, name: 'Кровати'},
+    ],
 }
 
 export const fetchCategories = createAsyncThunk(

@@ -3,4 +3,8 @@ interface Category {
     image: string
 }
 
+export interface Discount {
+    image?: string;
+}
+
 export default Category;
