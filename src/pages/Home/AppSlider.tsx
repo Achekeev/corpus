@@ -26,9 +26,11 @@ const NextArrow = (props: any) => {
 }
 
 const AppSlider = () => {
+  const items = useAppSelector(state => state.discount.items)
+
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: items.length > 4,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -36,7 +38,6 @@ const AppSlider = () => {
     prevArrow: <PrevArrow />,
   };
 
-  const items = useAppSelector(state => state.discount.items)
 
   return (
     <section className="discount-slider">

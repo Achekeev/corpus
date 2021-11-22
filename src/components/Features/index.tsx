@@ -35,7 +35,7 @@ const Features = () => {
 
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: categories.length > 7,
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 1,
