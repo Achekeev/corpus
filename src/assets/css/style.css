@@ -105,6 +105,9 @@
 .slider-wrapper-custom .slick-arrow::before {
   display: none;
 }
+.slider-wrapper-custom .slick-list{
+  height: 154px;
+}
 
 .slider-wrapper-custom .slick-arrow.slick-next {
   background-image: url("../icons/nextSliderBtn.png");
