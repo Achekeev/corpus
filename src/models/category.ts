@@ -1,10 +1,3 @@
-export type AllCategory = {
-    count: number | null,
-    next: null | number,
-    previous: null | number,
-    results: Category[],
-}
-
 interface Category {
     name: string,
     image: string

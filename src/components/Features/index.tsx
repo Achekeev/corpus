@@ -35,7 +35,7 @@ const Features = () => {
 
   const settings = {
     dots: false,
-    infinite: categories.results.length > 7,
+    infinite: categories.length > 7,
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 1,
@@ -68,7 +68,7 @@ const Features = () => {
       <div className="slider-wrapper-custom">
         <Slider {...settings}>
           {
-            !!categories.results.length && categories.results.map((category, index) => (
+            !!categories.length && categories.map((category, index) => (
               <Feature
                 image={category.image}
                 alt={index}
