@@ -1,0 +1,35 @@
+.h2 {
+    margin: 35px;
+    text-align: center;
+}
+.about_container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.about_container > img {
+    width: 48%;
+}
+
+.about_container > .text {
+    width: 48%;
+}
+
+.about_container > .text > p {
+    margin-top: 12px;
+}
+
+@media only all and (max-width: 1090px) {
+    .about_container {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+    }
+}

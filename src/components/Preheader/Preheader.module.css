@@ -1,0 +1,17 @@
+.preheader_container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+@media only all and (max-width: 660px) {
+    .preheader_container {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
