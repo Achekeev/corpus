@@ -2,7 +2,6 @@ import React, { useEffect, useContext } from "react";
 import { mainContext } from "../context/MainContext";
 import { useParams } from "react-router";
 import SubcategoryCard from "../components/Cards/SubcategoryCard";
-import Header from "../components/Header";
 
 import styles from "../components/Cards/Card.module.css";
 import stylesBr from "./styles/breadcrumbs.module.css";
@@ -20,7 +19,6 @@ const SubcategoriesPage = (props) => {
 
     return (
         <>
-            <Header />
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">

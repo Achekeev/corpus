@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer } from "react";
 import axios from "axios";
 import { API } from "../helpers/constants";
 
@@ -9,10 +9,20 @@ const INIT_STATE = {
     subcategories: [],
     items: [],
     oneItem: [],
+    allItems: [],
+    next: null,
+    prev: null,
 };
 
 const reducer = (state = INIT_STATE, action) => {
     switch (action.type) {
+        case "GET_ALL_ITEMS":
+            return {
+                ...state,
+                allItems: action.payload.data.results,
+                next: action.payload.data.next,
+                prev: action.payload.data.previous,
+            };
         case "GET_CATEGORIES":
             return {
                 ...state,
@@ -51,12 +61,23 @@ const reducer = (state = INIT_STATE, action) => {
 const MainContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
+    async function getAllItems(str) {
+        console.log(str);
+        let res = await axios.get(str);
+        dispatch({
+            type: "GET_ALL_ITEMS",
+            payload: res,
+        });
+        console.log(res.data);
+    }
+
     async function getCategories() {
         let res = await axios.get(`${API}/categories`);
         dispatch({
             type: "GET_CATEGORIES",
             payload: res,
         });
+        console.log(res);
     }
 
     async function getSubCategories(id) {
@@ -105,11 +126,15 @@ const MainContextProvider = ({ children }) => {
                 subcategories: state.subcategories,
                 oneItem: state.oneItem,
                 items: state.items,
+                allItems: state.allItems,
+                next: state.next,
+                prev: state.prev,
                 getItemsBySubCategories,
                 getCategories,
                 getSubCategories,
                 getOneItem,
                 postOrder,
+                getAllItems,
             }}
         >
             {children}

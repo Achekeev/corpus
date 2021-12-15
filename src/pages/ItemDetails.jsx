@@ -6,7 +6,6 @@ import styles from "./styles/ItemDetails.module.css";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import Header from "../components/Header";
 
 import stylesBr from "./styles/breadcrumbs.module.css";
 
@@ -15,7 +14,7 @@ import Link from "@mui/material/Link";
 
 import Button from "@mui/material/Button";
 
-import { add, list, exists, remove } from "cart-localstorage";
+import { add, exists } from "cart-localstorage";
 
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 import RemoveShoppingCartOutlinedIcon from "@mui/icons-material/RemoveShoppingCartOutlined";
@@ -48,7 +47,6 @@ const ItemDetails = () => {
     console.log(oneItem);
     return (
         <>
-            <Header />
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">

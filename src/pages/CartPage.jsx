@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import Header from "../components/Header";
 import CartCard from "../components/Cards/CartCard";
 
 import stylesBr from "./styles/breadcrumbs.module.css";
@@ -60,17 +59,6 @@ const CartPage = () => {
         clearCart();
     };
 
-    // async function postOrder(user, email, phone, date, ordered, array) {
-    //     axios.post("http://212.42.103.101:8920/cart/", {
-    //         user: user,
-    //         email: email,
-    //         phone: phone,
-    //         ordered_date: date,
-    //         ordered: ordered,
-    //         products: array,
-    //     });
-    // }
-
     const style = {
         position: "absolute",
         top: "50%",
@@ -106,7 +94,6 @@ const CartPage = () => {
 
     return (
         <>
-            <Header />
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
@@ -119,7 +106,7 @@ const CartPage = () => {
             </div>
 
             <div className={styles.cart_container}>
-                {arr ? (
+                {arr.length >= 1 ? (
                     arr.map((item) => (
                         <CartCard
                             key={item.id}
@@ -128,7 +115,9 @@ const CartPage = () => {
                         />
                     ))
                 ) : (
-                    <h2>Пусто</h2>
+                    <h2 style={{ textAlign: "center", margin: "200px auto" }}>
+                        Корзина пока пуста, добавьте сюда что-нибудь
+                    </h2>
                 )}
             </div>
 
@@ -144,6 +133,7 @@ const CartPage = () => {
                 <div>Сумма: {totalPr}</div>
 
                 <Button
+                    disabled={arr.length < 1 ? true : false}
                     onClick={handleOpen}
                     variant="contained"
                     color="success"

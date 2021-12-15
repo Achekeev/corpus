@@ -4,7 +4,6 @@ import { useParams } from "react-router";
 
 import styles from "../components/Cards/Card.module.css";
 import ItemCard from "../components/Cards/ItemCard";
-import Header from "../components/Header";
 
 import stylesBr from "./styles/breadcrumbs.module.css";
 
@@ -24,7 +23,6 @@ const ItemsPage = () => {
 
     return (
         <>
-            <Header />
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">

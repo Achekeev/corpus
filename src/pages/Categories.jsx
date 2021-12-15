@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import { mainContext } from "../context/MainContext";
 
 import CategoryCard from "../components/Cards/CategoryCard";
-import Header from "../components/Header";
 
 import styles from "../components/Cards/Card.module.css";
 import stylesBr from "./styles/breadcrumbs.module.css";
@@ -19,7 +18,6 @@ const Categories = () => {
 
     return (
         <>
-            <Header />
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
