@@ -14,6 +14,8 @@ import RemoveShoppingCartOutlinedIcon from "@mui/icons-material/RemoveShoppingCa
 import Sale from "../../assets/img/discount.png";
 import Hit from "../../assets/img/hot.png";
 
+import styles from "./Card.module.css";
+
 import { add, list, exists } from "cart-localstorage";
 
 const ItemCard = ({ item }) => {
@@ -43,19 +45,14 @@ const ItemCard = ({ item }) => {
         <Card sx={{ width: 250, m: 1, p: 0 }}>
             {item.hit ? (
                 <img
+                    className={styles.sale}
                     src={Sale}
                     alt="sale"
                     height="50"
-                    style={{ position: "absolute", margin: " -5px" }}
                 />
             ) : null}
             {item.sale ? (
-                <img
-                    src={Hit}
-                    alt="hit"
-                    height="50"
-                    style={{ position: "absolute", margin: "-5px 210px" }}
-                />
+                <img className={styles.hit} src={Hit} alt="hit" height="50" />
             ) : null}
 
             <CardMedia

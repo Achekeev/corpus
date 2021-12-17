@@ -61,7 +61,11 @@ const ItemDetails = () => {
                 </Breadcrumbs>
             </div>
             <div className={styles.container}>
-                <Carousel infiniteLoop={true} width="50%">
+                <Carousel
+                    className={styles.carousel_root}
+                    infiniteLoop={true}
+                    width="70%"
+                >
                     <div>
                         <img src={oneItem.image} />
                     </div>
