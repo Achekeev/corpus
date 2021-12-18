@@ -19,7 +19,7 @@ const ItemsPage = () => {
         getItemsBySubCategories(params.id);
     }, []);
 
-    console.log(items.results);
+    // console.log(items.results);
 
     return (
         <>

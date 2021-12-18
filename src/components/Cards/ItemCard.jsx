@@ -23,8 +23,6 @@ const ItemCard = ({ item }) => {
     const [inCart, setInCart] = useState(exists(item.id));
     const navigate = useNavigate();
 
-    console.log(listOfCart);
-
     const handleClick = (id) => {
         navigate(`/item/${id}/`);
     };

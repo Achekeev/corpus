@@ -32,17 +32,17 @@ const CartPage = () => {
     const [phone, setPhone] = useState("");
 
     const handleInputUser = (e) => {
-        console.log(e.target.value);
+        // console.log(e.target.value);
         setUser(e.target.value);
     };
 
     const handleInputEmail = (e) => {
-        console.log(e.target.value);
+        // console.log(e.target.value);
         setEmail(e.target.value);
     };
 
     const handleInputPhone = (e) => {
-        console.log(e.target.value);
+        // console.log(e.target.value);
         setPhone(e.target.value);
     };
 
@@ -51,7 +51,7 @@ const CartPage = () => {
         let today = new Date();
         let hours = today.getHours();
         let minutes = today.getMinutes();
-        console.log(date);
+        // console.log(date);
         date = date + " " + hours + ":" + minutes;
 
         let bool = true;
@@ -89,8 +89,6 @@ const CartPage = () => {
     };
 
     const totalPr = total();
-
-    console.log(arr);
 
     return (
         <>

@@ -62,13 +62,13 @@ const MainContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
     async function getAllItems(str) {
-        console.log(str);
+        // console.log(str);
         let res = await axios.get(str);
         dispatch({
             type: "GET_ALL_ITEMS",
             payload: res,
         });
-        console.log(res.data);
+        // console.log(res.data);
     }
 
     async function getCategories() {
@@ -77,7 +77,7 @@ const MainContextProvider = ({ children }) => {
             type: "GET_CATEGORIES",
             payload: res,
         });
-        console.log(res);
+        // console.log(res);
     }
 
     async function getSubCategories(id) {
@@ -100,7 +100,7 @@ const MainContextProvider = ({ children }) => {
         let res = await axios.get(
             `${API}/products/?subcategory=${id}&prod_set=&price=&fabric=`
         );
-        console.log(res);
+        // console.log(res);
         dispatch({
             type: "GET_ITEMS_BY_SUBCATEGORIES",
             payload: res,

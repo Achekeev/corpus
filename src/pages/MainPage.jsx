@@ -22,11 +22,6 @@ const MainPage = () => {
         getAllItems("http://212.42.103.101:8920/products/");
     }, []);
 
-    console.log(allItems);
-
-    console.log(next);
-    console.log(prev);
-
     return (
         <>
             <div className={stylesBr.breadcrumbs_container}>

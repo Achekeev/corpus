@@ -29,8 +29,8 @@ const ItemDetails = () => {
         setInCart(exists(params.id));
     }, [params.id]);
 
-    console.log(inCart);
-    console.log(params.id);
+    // console.log(inCart);
+    // console.log(params.id);
 
     const handleAdToCart = (e, item) => {
         e.preventDefault();
@@ -44,7 +44,7 @@ const ItemDetails = () => {
         setInCart(!inCart);
     };
 
-    console.log(oneItem);
+    // console.log(oneItem);
     return (
         <>
             <div className={stylesBr.breadcrumbs_container}>
