@@ -43,8 +43,21 @@ const ItemDetails = () => {
         add(item.id);
         setInCart(!inCart);
     };
+    console.log(oneItem);
+    const arrImages = [
+        oneItem.image,
+        oneItem.image2,
+        oneItem.image3,
+        oneItem.image4,
+        oneItem.image5,
+    ];
+
+    console.log(arrImages);
+    const filterArr = arrImages.filter((n) => n);
+    console.log(filterArr);
 
     // console.log(oneItem);
+
     return (
         <>
             <div className={stylesBr.breadcrumbs_container}>
@@ -66,21 +79,11 @@ const ItemDetails = () => {
                     infiniteLoop={true}
                     width="70%"
                 >
-                    <div>
-                        <img src={oneItem.image} />
-                    </div>
-                    <div>
-                        <img src={oneItem.image2} />
-                    </div>
-                    <div>
-                        <img src={oneItem.image3} />
-                    </div>
-                    <div>
-                        <img src={oneItem.image4} />
-                    </div>
-                    <div>
-                        <img src={oneItem.image5} />
-                    </div>
+                    {filterArr.map((item) => (
+                        <div key={item}>
+                            <img src={item} alt="item" />
+                        </div>
+                    ))}
                 </Carousel>
 
                 <div className={styles.item_details}>
