@@ -19,20 +19,28 @@ const ItemsPage = () => {
         getItemsBySubCategories(params.id);
     }, []);
 
-    // console.log(items.results);
+    console.log("items page");
+    console.log(params);
 
     return (
         <>
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
-                        Home
+                        Главная
                     </Link>
                     <Link underline="hover" color="inherit" href="/categories">
-                        Категории
+                        Каталог
+                    </Link>
+                    <Link
+                        underline="hover"
+                        color="inherit"
+                        href={`/${params.subcat}/${params.subcatId}`}
+                    >
+                        {params.subcat}
                     </Link>
                     <Link underline="hover" color="inherit" href="#">
-                        Подкатегории
+                        {params.sub}
                     </Link>
                 </Breadcrumbs>
             </div>

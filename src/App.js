@@ -14,10 +14,16 @@ function App() {
         { path: "/about", element: <AboutPage /> },
         { path: "/categories", element: <Categories /> },
         { path: "/cart", element: <CartPage /> },
-        { path: "/categories/sub/:id", element: <SubcategoriesPage /> },
-
-        { path: "categories/sub/:id/items/:id/", element: <ItemsPage /> },
-        { path: "/item/:id/", element: <ItemDetails /> },
+        { path: "/:sub/:id", element: <SubcategoriesPage /> },
+        // ${subcat}/${subcatId}/items/${id}/
+        {
+            path: "/:subcat/:subcatId/:sub/:id/items/:id/",
+            element: <ItemsPage />,
+        },
+        {
+            path: "/:subcat/:subcatId/:sub/:id/items/:subid/sub/item/:id",
+            element: <ItemDetails />,
+        },
     ]);
     return routes;
 }

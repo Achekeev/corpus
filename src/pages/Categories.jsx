@@ -21,10 +21,10 @@ const Categories = () => {
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
-                        Home
+                        Главная
                     </Link>
                     <Link underline="hover" color="inherit" href="/categories">
-                        Категории
+                        Каталог
                     </Link>
                 </Breadcrumbs>
             </div>

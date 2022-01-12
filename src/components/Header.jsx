@@ -5,7 +5,7 @@ import Preheader from "./Preheader/Preheader";
 const Header = () => {
     return (
         <>
-            <Preheader />
+            {/* <Preheader /> */}
             <Navbar />
         </>
     );

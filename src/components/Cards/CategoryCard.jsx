@@ -7,27 +7,27 @@ import Typography from "@mui/material/Typography";
 
 import { useNavigate } from "react-router-dom";
 
-const CategoryCard = (props) => {
+const CategoryCard = ({ item }) => {
     const navigate = useNavigate();
 
-    const handleClick = (id) => {
-        navigate(`sub/${id}`);
+    const handleClick = (subcat, subcatId) => {
+        navigate(`/${subcat}/${subcatId}`);
     };
 
     return (
         <Card
             sx={{ width: 250, m: 1, p: 0 }}
-            onClick={() => handleClick(props.item.id)}
+            onClick={() => handleClick(item.name, item.id)}
         >
             <CardMedia
                 component="img"
                 height="200"
-                image={props.item.image}
+                image={item.image}
                 alt="categories"
             />
             <CardContent>
                 <Typography gutterBottom variant="h8" component="div">
-                    {props.item.name}
+                    {item.name}
                 </Typography>
             </CardContent>
         </Card>

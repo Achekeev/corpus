@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import stylesBr from "./styles/breadcrumbs.module.css";
-import Mebel from "../assets/img/Mebel.jpeg";
+import Main from "../assets/img/qwe.jpeg";
 
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
@@ -27,12 +27,12 @@ const MainPage = () => {
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
-                        Home
+                        Главная
                     </Link>
                 </Breadcrumbs>
             </div>
             <div>
-                <img width="100%" src={Mebel} alt="hero_image" />
+                <img width="100%" src={Main} alt="hero_image" />
             </div>
             <div className={styles.card_container}>
                 {allItems ? (

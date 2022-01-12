@@ -28,9 +28,7 @@ const ItemDetails = () => {
         getOneItem(params.id);
         setInCart(exists(params.id));
     }, [params.id]);
-
-    // console.log(inCart);
-    // console.log(params.id);
+    console.log(params);
 
     const handleAdToCart = (e, item) => {
         e.preventDefault();
@@ -43,7 +41,6 @@ const ItemDetails = () => {
         add(item.id);
         setInCart(!inCart);
     };
-    console.log(oneItem);
     const arrImages = [
         oneItem.image,
         oneItem.image2,
@@ -52,24 +49,36 @@ const ItemDetails = () => {
         oneItem.image5,
     ];
 
-    console.log(arrImages);
     const filterArr = arrImages.filter((n) => n);
-    console.log(filterArr);
-
-    // console.log(oneItem);
 
     return (
         <>
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
-                        Home
+                        Главная
                     </Link>
                     <Link underline="hover" color="inherit" href="/categories">
-                        Категории
+                        Каталог
+                    </Link>
+                    <Link
+                        underline="hover"
+                        color="inherit"
+                        href={`/${params.subcat}/${params.subcatId}`}
+                    >
+                        {params.subcat}
+                    </Link>
+
+                    {/* /:subcat/:subcatId/:sub/:id/items/:id/" */}
+                    <Link
+                        underline="hover"
+                        color="inherit"
+                        href={`/${params.subcat}/${params.subcatId}/${params.sub}/${params.subcatId}/items/${params.subid}`}
+                    >
+                        {params.sub}
                     </Link>
                     <Link underline="hover" color="inherit" href="#">
-                        Подкатегории
+                        {oneItem.name}
                     </Link>
                 </Breadcrumbs>
             </div>

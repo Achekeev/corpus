@@ -11,7 +11,7 @@ const Navbar = () => {
                     <img height="35px" src={Logo} alt="Logo" />
                 </Link>
                 <Link to="/categories">
-                    <p>Категории</p>
+                    <p>Каталог</p>
                 </Link>
                 <Link to="/about">
                     <p>О нас</p>

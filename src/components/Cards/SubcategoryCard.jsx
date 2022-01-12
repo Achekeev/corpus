@@ -9,28 +9,27 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Margin } from "@mui/icons-material";
 
-const CategoryCard = (props) => {
+const CategoryCard = ({ item }) => {
     const navigate = useNavigate();
-
-    const handleClick = (id) => {
-        navigate(`items/${id}/`);
+    const handleClick = (subcat, subId, subcatId) => {
+        navigate(`${subcat}/${subcatId}/items/${subId}/`);
     };
 
-    if (props.item) {
+    if (item) {
         return (
             <Card
-                onClick={() => handleClick(props.item.id)}
+                onClick={() => handleClick(item.name, item.id, item.category)}
                 sx={{ width: 250, m: 1, p: 0 }}
             >
                 <CardMedia
                     component="img"
                     height="200"
-                    image={props.item.image}
+                    image={item.image}
                     alt="categories"
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                        {props.item.name}
+                        {item.name}
                     </Typography>
                 </CardContent>
             </Card>
