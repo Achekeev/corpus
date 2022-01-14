@@ -16,10 +16,9 @@ import Hit from "../../assets/img/hot.png";
 
 import styles from "./Card.module.css";
 
-import { add, list, exists } from "cart-localstorage";
+import { add, exists } from "cart-localstorage";
 
 const ItemCard = ({ item }) => {
-    const [listOfCart, setListOfCart] = useState(list());
     const [inCart, setInCart] = useState(exists(item.id));
     const navigate = useNavigate();
 

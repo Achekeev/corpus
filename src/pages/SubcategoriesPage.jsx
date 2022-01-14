@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from "react";
 import { mainContext } from "../context/MainContext";
 import { useParams } from "react-router";
 import SubcategoryCard from "../components/Cards/SubcategoryCard";
+import { Link as LinkRouter } from "react-router-dom";
 
 import styles from "../components/Cards/Card.module.css";
 import stylesBr from "./styles/breadcrumbs.module.css";
@@ -21,13 +22,14 @@ const SubcategoriesPage = (props) => {
         <>
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
-                    <Link underline="hover" color="inherit" href="/">
-                        Главная
+                    <Link underline="hover" color="inherit">
+                        <LinkRouter to="/">Главная</LinkRouter>
                     </Link>
-                    <Link underline="hover" color="inherit" href="/categories">
-                        Каталог
+                    <Link underline="hover" color="inherit">
+                        <LinkRouter to="/categories">Каталог</LinkRouter>
                     </Link>
-                    <Link underline="hover" color="inherit" href="#">
+
+                    <Link underline="hover" color="inherit">
                         {params.sub}
                     </Link>
                 </Breadcrumbs>

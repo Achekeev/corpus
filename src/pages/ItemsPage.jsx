@@ -2,6 +2,8 @@ import React, { useContext, useEffect } from "react";
 import { mainContext } from "../context/MainContext";
 import { useParams } from "react-router";
 
+import { Link as LinkRouter } from "react-router-dom";
+
 import styles from "../components/Cards/Card.module.css";
 import ItemCard from "../components/Cards/ItemCard";
 
@@ -26,18 +28,17 @@ const ItemsPage = () => {
         <>
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
-                    <Link underline="hover" color="inherit" href="/">
-                        Главная
+                    <Link underline="hover" color="inherit">
+                        <LinkRouter to="/">Главная</LinkRouter>
                     </Link>
-                    <Link underline="hover" color="inherit" href="/categories">
-                        Каталог
+                    <Link underline="hover" color="inherit">
+                        <LinkRouter to="/categories">Каталог</LinkRouter>
                     </Link>
-                    <Link
-                        underline="hover"
-                        color="inherit"
-                        href={`/${params.subcat}/${params.subcatId}`}
-                    >
-                        {params.subcat}
+
+                    <Link underline="hover" color="inherit">
+                        <LinkRouter to={`/${params.subcat}/${params.subcatId}`}>
+                            {params.subcat}
+                        </LinkRouter>
                     </Link>
                     <Link underline="hover" color="inherit" href="#">
                         {params.sub}

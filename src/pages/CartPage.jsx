@@ -17,6 +17,8 @@ import { mainContext } from "../context/MainContext";
 
 import styles from "./styles/CartPage.module.css";
 
+import { Link as LinkRouter } from "react-router-dom";
+
 const CartPage = () => {
     const { postOrder } = useContext(mainContext);
     const [arr, setArr] = useState(list());
@@ -90,11 +92,11 @@ const CartPage = () => {
         <>
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
-                    <Link underline="hover" color="inherit" href="/">
-                        Главная
+                    <Link underline="hover" color="inherit">
+                        <LinkRouter to="/">Главная</LinkRouter>
                     </Link>
-                    <Link underline="hover" color="inherit" href="/cart">
-                        Корзина
+                    <Link underline="hover" color="inherit">
+                        <LinkRouter to="/cart">Корзина</LinkRouter>
                     </Link>
                 </Breadcrumbs>
             </div>

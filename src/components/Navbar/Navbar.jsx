@@ -19,6 +19,9 @@ const Navbar = () => {
                 <Link to="/cart">
                     <p>Корзина</p>
                 </Link>
+                <Link to="/oferta">
+                    <p>Публичная оферта</p>
+                </Link>
             </div>
             <hr />
         </>

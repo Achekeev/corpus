@@ -5,16 +5,18 @@ import stylesBr from "./styles/breadcrumbs.module.css";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 
+import { Link as LinkRouter } from "react-router-dom";
+
 const AboutPage = () => {
     return (
         <>
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
-                    <Link underline="hover" color="inherit" href="/">
-                        Главная
+                    <Link underline="hover" color="inherit">
+                        <LinkRouter to="/">Главная</LinkRouter>
                     </Link>
-                    <Link underline="hover" color="inherit" href="/about">
-                        О нас
+                    <Link underline="hover" color="inherit">
+                        <LinkRouter to="/about">О нас</LinkRouter>
                     </Link>
                 </Breadcrumbs>
             </div>

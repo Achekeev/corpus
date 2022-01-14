@@ -6,6 +6,7 @@ import styles from "./styles/ItemDetails.module.css";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { Link as LinkRouter } from "react-router-dom";
 
 import stylesBr from "./styles/breadcrumbs.module.css";
 
@@ -23,12 +24,11 @@ const ItemDetails = () => {
     const { getOneItem, oneItem } = useContext(mainContext);
     const params = useParams();
     const [inCart, setInCart] = useState(exists(params.id));
-
+    console.log(inCart);
     useEffect(() => {
         getOneItem(params.id);
         setInCart(exists(params.id));
-    }, [params.id]);
-    console.log(params);
+    }, []);
 
     const handleAdToCart = (e, item) => {
         e.preventDefault();
@@ -55,28 +55,33 @@ const ItemDetails = () => {
         <>
             <div className={stylesBr.breadcrumbs_container}>
                 <Breadcrumbs aria-label="breadcrumb">
-                    <Link underline="hover" color="inherit" href="/">
-                        Главная
+                    <Link underline="hover" color="inherit">
+                        <LinkRouter to="/">Главная</LinkRouter>
                     </Link>
-                    <Link underline="hover" color="inherit" href="/categories">
-                        Каталог
-                    </Link>
-                    <Link
-                        underline="hover"
-                        color="inherit"
-                        href={`/${params.subcat}/${params.subcatId}`}
-                    >
-                        {params.subcat}
+                    <Link underline="hover" color="inherit">
+                        <LinkRouter to="/categories">Каталог</LinkRouter>
                     </Link>
 
-                    {/* /:subcat/:subcatId/:sub/:id/items/:id/" */}
-                    <Link
-                        underline="hover"
-                        color="inherit"
-                        href={`/${params.subcat}/${params.subcatId}/${params.sub}/${params.subcatId}/items/${params.subid}`}
-                    >
-                        {params.sub}
-                    </Link>
+                    {params.subcat ? (
+                        <Link underline="hover" color="inherit">
+                            <LinkRouter
+                                to={`/${params.subcat}/${params.subcatId}`}
+                            >
+                                {params.subcat}
+                            </LinkRouter>
+                        </Link>
+                    ) : null}
+
+                    {params.sub ? (
+                        <Link underline="hover" color="inherit">
+                            <LinkRouter
+                                to={`/${params.subcat}/${params.subcatId}/${params.sub}/${params.subcatId}/items/${params.subid}`}
+                            >
+                                {params.sub}
+                            </LinkRouter>
+                        </Link>
+                    ) : null}
+
                     <Link underline="hover" color="inherit" href="#">
                         {oneItem.name}
                     </Link>

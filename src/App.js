@@ -7,6 +7,7 @@ import CartPage from "./pages/CartPage";
 import SubcategoriesPage from "./pages/SubcategoriesPage.jsx";
 import ItemsPage from "./pages/ItemsPage";
 import ItemDetails from "./pages/ItemDetails";
+import OfertaPage from "./pages/OfertaPage";
 
 function App() {
     let routes = useRoutes([
@@ -23,6 +24,14 @@ function App() {
         {
             path: "/:subcat/:subcatId/:sub/:id/items/:subid/sub/item/:id",
             element: <ItemDetails />,
+        },
+        {
+            path: "/sub/item/:id",
+            element: <ItemDetails />,
+        },
+        {
+            path: "oferta",
+            element: <OfertaPage />,
         },
     ]);
     return routes;
